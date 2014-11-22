@@ -23,6 +23,18 @@
   </label>
 </p>
 
+<div>
+<h2>Friend details</h2> 
+<p>{{firstName}}</p> <p>{{lastName}}</p>
+</div>
+
+
 <input type="submit" value="Save"/>
-<button {{action "cancel"}}>Cancel</button> 
-</form>
+<button {{action "cancel"}}>Cancel</button> {{input type="checkbox" name=trusted}}
+
+
+<form {{action "save" on="submit"}}> 
+<h2>{{errorMessage}}</h2>
+
+
+</form> 
