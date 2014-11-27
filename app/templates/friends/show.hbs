@@ -1,11 +1,19 @@
+<div class="friend-profile">
+	<p>{{firstName}}</p>
+	<p>{{lastName}}</p>
+	<p>{{email}}</p>
+	<p>{{twitter}}</p>
+	<p>{{link-to 'Lend article' 'articles.new'}}</p>
+	<p>{{link-to 'Edit info' 'friends.edit' this}}</p> 
+	<p><a href="#" {{action "delete" this}}>delete</a></p>
+</div>
 
-<ul>
-	<li>First Name: {{firstName}}</li>
-	<li>Last Name: {{lastName}}</li>
-	<li>Email: {{email}}</li>
-	<li>twitter: {{twitter}}</li>
-	<li>{{link-to 'Edit info' 'friends.edit' this }}</li>
-</ul>
+<div class="articles-container">
+	{{outlet}}
+</div>
+
+
+
 
 
 

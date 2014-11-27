@@ -21,6 +21,8 @@ export default Ember.ObjectController.extend({
         });
 	} 		else {
 			this.set('errorMessage', 'You have to fill all the fields');
+
+			return false;
 		} 
 	},
 		cancel: function() { 
