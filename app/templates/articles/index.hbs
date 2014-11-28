@@ -1,19 +1,27 @@
-<table class="primary"> <thead>
-			<tr> 
-				<th>Description</th> 
-				<th>Borrowed since</th> 
-				<th></th>
-				<th></th>		
-    		</tr>
-  		</thead>
-	<tbody>
-		{{#each}}
-			<tr> 
-				<td>{{description}}</td> 	
-				<td>{{createdAt}}</td> 
-				<td></td>
-				<td></td>	
+<table class="primary">
+	<thead>
+		<tr> 
+			<th>Description</th> 
+			<th>Borrowed since</th> 
+			<th></th>
+			<th></th>	
+		</tr>	
+	</thead>
+	<tbody>    	
+		{{#each itemController='articles/item'}}
+			<tr>
+				<td>{{description}}</td>
+				<td>{{notes}}</td>
+				<td>{{formatted-date createdAt 'LL'}}</td>
+				<td>{{view Ember.Select content=states selection=state}}</td>
+				<td>
+					{{#if isSaving}}
+						<p>Saving .... </p>
+					{{/if}}	
+				</td>
 			</tr>
 		{{/each}}
 	</tbody>
 </table>
+
+
